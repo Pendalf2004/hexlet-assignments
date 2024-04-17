@@ -6,8 +6,8 @@ public class Segment {
     private Point endsAt;
 
     public Segment(Point start, Point end) {
-    this.startsAt = start;
-    this.endsAt = end;
+        this.startsAt = start;
+        this.endsAt = end;
     }
     public Point getBeginPoint() {
         return this.startsAt;
