@@ -16,8 +16,8 @@ public class Segment {
         return this.endsAt;
     }
     public Point getMidPoint() {
-        int middleX = (this.startsAt().getX() + this.startsAt().getY()) / 2;
-        int middleY = (this.endsAt().getX() + this.endsAt().getY()) / 2;
+        int middleX = (this.getBeginPoint().getX() + this.getEndPoint().getX()) / 2;
+        int middleY = (this.getBeginPoint().getY() + this.getEndPoint().getY()) / 2;
         return new Point(middleX, middleY);
     }
 
