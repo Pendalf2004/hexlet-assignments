@@ -16,7 +16,7 @@ public class Flat implements Home {
         return this.area + this.balconyArea;
     }
     public int compareTo(Home compareObj) {
-        if (this.getArea() == compareObj.getArea()) {return 0}
+        if (this.getArea() == compareObj.getArea()) {return 0;}
         int result;
         result = this.getArea() > compareObj.getArea() ? 1 : -1;
         return result;
