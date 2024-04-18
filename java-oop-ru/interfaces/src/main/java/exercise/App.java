@@ -10,9 +10,9 @@ public class App {
        }
     public List<String> buildApartmentsList(List<Home> objects, int n) {
         var sortedObjects = objects.stream()
-                .sorted(Comparator.comparingDouble(Home::getArea()))
+                .sorted(Comparator.comparingDouble(Home::getArea))
                 .toList();
-        var result = new List<String>;
+        var result = new List<String>();
         for (var i = 0; i <= n; i++) {
             result.add(sortedObjects.get(i).toString());
         }
