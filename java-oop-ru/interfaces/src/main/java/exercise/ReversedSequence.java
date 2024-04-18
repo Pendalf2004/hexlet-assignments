@@ -20,16 +20,20 @@ class ReversedSequence implements java.lang.CharSequence {
     public java.lang.String toString() {
         return  java.util.Arrays.toString(sequence);
     }
+@Override
     public char charAt(int n) {
         return sequence[n];
     }
+ @Override
     public int length() {
         return this.length;
     }
+@Override
     public char[] subSequence(int from, int to) {
         if ((from >= to) || (this.length < 1)) {return new char[0];}
-        char[] result = new char[to - from];
-        for (int i = 0; i < result.length(); i++) {
+        var length = to - from;
+        char[] result = new char[length];
+        for (int i = 0; i < (length); i++) {
             result[i] = this.sequence[from + i];
         }
         return result;

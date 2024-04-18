@@ -12,12 +12,16 @@ public class Cottage implements Home {
         this.area = area;
         this.floorCount = floorCount;
     }
-
+@Override
     public int compareTo(Home compareObj) {
         if (this.getArea() == compareObj.getArea()) {return 0;}
         int result;
         result = this.getArea() > compareObj.getArea() ? 1 : -1;
         return result;
+    }
+    @Override
+    public double getArea() {
+        return this.area;
     }
 
     @java.lang.Override

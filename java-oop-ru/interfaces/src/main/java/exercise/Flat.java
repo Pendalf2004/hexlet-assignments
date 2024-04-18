@@ -12,9 +12,11 @@ public class Flat implements Home {
         this.balconyArea = blcArea;
         this.floor = floor;
     }
+    @Override
     public double getArea() {
         return this.area + this.balconyArea;
     }
+    @Override
     public int compareTo(Home compareObj) {
         if (this.getArea() == compareObj.getArea()) {return 0;}
         int result;

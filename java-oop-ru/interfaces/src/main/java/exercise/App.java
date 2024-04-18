@@ -1,5 +1,6 @@
 package exercise;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -9,9 +10,9 @@ public class App {
        }
     public List<String> buildApartmentsList(List<Home> objects, int n) {
         var sortedObjects = objects.stream()
-                .sorted((obj1, obj2) -> obj1.getArea().CompareTo(obj2.getArea()))
+                .sorted(Comparator.comparingDouble(Home::getArea()))
                 .toList();
-        var result = new List<String>[n];
+        var result = new List<String>;
         for (var i = 0; i <= n; i++) {
             result.add(sortedObjects.get(i).toString());
         }
