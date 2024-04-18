@@ -1,12 +1,14 @@
 package exercise;
 
 // BEGIN
-class ReversedSequence implements java.lang.charsequence {
+class ReversedSequence implements java.lang.CharSequence {
     private char[] sequence;
+    private int length;
 
-    public ReversedSequence(String input) {
+    ReversedSequence(String input) {
         char[] result = new char[input.length()];
         int index = 0;
+        this.length = input.length();
         for (var i = input.length() - 1; i >= 0; i--) {
             result[index] = input.charAt(i);
             index++;
@@ -22,10 +24,10 @@ class ReversedSequence implements java.lang.charsequence {
         return sequence[n];
     }
     public int length() {
-        return sequence.length();
+        return this.length;
     }
     public char[] subSequence(int from, int to) {
-        if ((from >= to) || (this.sequence.length < 1)) {return new char[0];}
+        if ((from >= to) || (this.length < 1)) {return new char[0];}
         char[] result = new char[to - from];
         for (int i = 0; i < result.length(); i++) {
             result[i] = this.sequence[from + i];
