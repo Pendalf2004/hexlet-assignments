@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class App {
     public static void main(String[] args) {
        }
-    public List<String> buildApartmentsList(List<Home> objects, int n) {
+    public static List<String> buildApartmentsList(List<Home> objects, int n) {
         return objects.stream()
                 .sorted(Comparator.comparingDouble(Home::getArea))
                 .limit(n)
