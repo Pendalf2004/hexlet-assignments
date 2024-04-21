@@ -34,13 +34,13 @@ class ReversedSequence implements java.lang.CharSequence {
 
     @Override
     public CharSequence subSequence(int from, int to) {
-        if ((from >= to) || (this.length < 1)) {return new char[0];}
+        if ((from >= to) || (this.length < 1)) {return new ReversedSequence("");}
         var length = to - from;
         char[] result = new char[length];
         for (int i = 0; i < (length); i++) {
             result[i] = this.sequence[from + i];
         }
-        return result;
+        return new ReversedSequence(ReversedSequence(result.toString()));
     }
 }
 // END
