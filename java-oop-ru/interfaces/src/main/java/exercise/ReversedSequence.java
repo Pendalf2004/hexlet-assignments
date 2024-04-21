@@ -40,7 +40,7 @@ class ReversedSequence implements java.lang.CharSequence {
         for (int i = 0; i < (length); i++) {
             result[i] = this.sequence[from + i];
         }
-        return new ReversedSequence(ReversedSequence(result.toString()));
+        return result.toString();
     }
 }
 // END
