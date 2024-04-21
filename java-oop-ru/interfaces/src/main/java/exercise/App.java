@@ -12,7 +12,7 @@ public class App {
         var sortedObjects = objects.stream()
                 .sorted(Comparator.comparingDouble(Home::getArea))
                 .toList();
-        var result = new List<String>();
+        var result = new ArrayList<String>();
         for (var i = 0; i <= n; i++) {
             result.add(sortedObjects.get(i).toString());
         }

@@ -13,8 +13,10 @@ public class Flat implements Home {
     }
     @Override
     public double getArea() {
+
         return this.area + this.balconyArea;
     }
+
     @Override
     public int compareTo(Home compareObj) {
         if (this.getArea() == compareObj.getArea()) {return 0;}
