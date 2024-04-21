@@ -12,6 +12,7 @@ public class App {
         return objects.stream()
                 .sorted(Comparator.comparingDouble(Home::getArea))
                 .limit(n)
+                .map(Home::toString)
                 .toList();
         //var result = new ArrayList<String>();
         }

@@ -28,11 +28,12 @@ class ReversedSequence implements java.lang.CharSequence {
 
     @Override
     public int length() {
+
         return this.length;
     }
 
     @Override
-    public char[] subSequence(int from, int to) {
+    public CharSequence subSequence(int from, int to) {
         if ((from >= to) || (this.length < 1)) {return new char[0];}
         var length = to - from;
         char[] result = new char[length];
