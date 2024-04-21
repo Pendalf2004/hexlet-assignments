@@ -9,12 +9,11 @@ public class App {
     public static void main(String[] args) {
        }
     public List<String> buildApartmentsList(List<Home> objects, int n) {
-        var sortedObjects = objects.stream()
+        return objects.stream()
                 .sorted(Comparator.comparingDouble(Home::getArea))
+                .limit(n)
                 .toList();
-        var result = new ArrayList<String>();
-        for (var i = 0; i <= n; i++) {
-            result.add(sortedObjects.get(i).toString());
+        //var result = new ArrayList<String>();
         }
     }
 }
