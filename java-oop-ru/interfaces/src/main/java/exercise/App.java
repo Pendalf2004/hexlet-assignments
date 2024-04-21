@@ -15,6 +15,5 @@ public class App {
                 .toList();
         //var result = new ArrayList<String>();
         }
-    }
 }
 // END
