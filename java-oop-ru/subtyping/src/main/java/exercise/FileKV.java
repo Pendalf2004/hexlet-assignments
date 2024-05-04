@@ -4,7 +4,7 @@ package exercise;
 import java.util.Map;
 import java.util.HashMap;
 
-public class FileKV implements KeyValueStorage {
+/*public class FileKV implements KeyValueStorage {
     private HashMap<String, String> data;
     private String dataFilePath;
 
@@ -15,5 +15,5 @@ public class FileKV implements KeyValueStorage {
     }
 
 
-}
+}*/
 // END
