@@ -11,7 +11,7 @@ public class FileKV implements KeyValueStorage {
     public FileKV(String filePath, Map<String, String> data) {
         this.data = data;
         this.dataFilePath = filePath;
-        var fromFile = Utils.unserialize(Utils.readFile)
+        var fromFile = Utils.unserialize(Utils.readFile);
     }
 
 
