@@ -6,12 +6,12 @@ import java.util.Set;
 
 // BEGIN
 public class App {
-    public static void swapKeyValue(inMemoryKV data) {
+    public static void swapKeyValue(InMemoryKV data) {
         var forDelete = data;
-        data.forEach((key, value) -> {
+        data.toMap().forEach((key, value) -> {
             data.set(value, key);
         });
-        forDelete.forEach((key) -> {
+        forDelete.toMap().forEach((key, value) -> {
             data.unset(key);
         });
     }

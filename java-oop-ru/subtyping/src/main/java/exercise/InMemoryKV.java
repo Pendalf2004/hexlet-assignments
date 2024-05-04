@@ -10,16 +10,16 @@ public class InMemoryKV implements KeyValueStorage {
     public InMemoryKV(HashMap<String, String> inputData) {
         this.data = inputData;
     }
-    public static Map<String, String> toMap() {
+    public Map<String, String> toMap() {
         return this.data;
     }
-    public static void set(String key, String value) {
+    public void set(String key, String value) {
         this.data.put(key, value);
     }
-    public static void unset(String key) {
+    public void unset(String key) {
         this.data.remove(key);
     }
-    public static String get(String key, String defaultValue) {
+    public String get(String key, String defaultValue) {
         var result = this.data.containsKey(key) ? this.data.get(key) : defaultValue;
         return result;
     }
