@@ -6,7 +6,7 @@ import java.util.Set;
 
 // BEGIN
 public class App {
-    public static void swapKeyValue(InMemoryKV data) {
+    public static void swapKeyValue(KeyValueStorage data) {
         var forDelete = data;
         data.toMap().forEach((key, value) -> {
             data.set(value, key);
