@@ -15,9 +15,9 @@ class Tag {
     public String getAttributesStr() {
         String result = " ";
         for (var entry : attributes.entrySet()) {
-            result += entry.getKey() + "=\"" + entry.getValue() + "\"";
+            result += entry.getKey() + "=\"" + entry.getValue() + "\" ";
         }
-        return result;
+        return result.substring(0, result.length() - 1);
     }
     public String getTagStr() {
         return "<" + this.tagName +  this.getAttributesStr() + ">";
