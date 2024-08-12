@@ -4,8 +4,8 @@ import java.util.Map;
 
 // BEGIN
 class Tag {
-    final public Map<String, String> attributes;
-    final public String tagName;
+    final Map<String, String> attributes;
+    final String tagName;
 
     Tag(String name, Map<String, String> attr) {
         this.tagName = name;

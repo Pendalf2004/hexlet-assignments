@@ -11,7 +11,7 @@ class SingleTag extends Tag {
 
     @Override
     public String toString() {
-        return this.getAttributesStr();
+        return this.getTagStr();
     }
 }
 // END
