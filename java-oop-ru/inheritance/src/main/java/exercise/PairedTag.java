@@ -14,9 +14,12 @@ class PairedTag extends Tag {
     }
     @Override
     public String toString() {
-        String result = "<" + this.tagName + this.getAttributesStr() + " ";
+        String result = "<" + this.tagName + this.getAttributesStr();
+        if (!child.isEmpty()) {
+            result += " ";
+        }
         for (var atr : child) {
-            result += child.toString();
+            result += atr.toString();
         }
         result += ">" + this.body + "</" + this.tagName + ">";
         return result;
