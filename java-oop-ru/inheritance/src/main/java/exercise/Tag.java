@@ -1,12 +1,11 @@
 package exercise;
 
-import java.util.stream.Collectors;
 import java.util.Map;
 
 // BEGIN
 class Tag {
-    final protected Map<String, String> attributes;
-    final protected String tagName;
+    final public Map<String, String> attributes;
+    final public String tagName;
 
     Tag(String name, Map<String, String> attr) {
         this.tagName = name;
