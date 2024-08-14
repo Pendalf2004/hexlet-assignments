@@ -2,8 +2,8 @@ package exercise;
 
 // BEGIN
 class Circle {
-    final private Point center;
-    final private int radius;
+    final Point center;
+    final int radius;
 
     public int getRadius() {
         return radius;
