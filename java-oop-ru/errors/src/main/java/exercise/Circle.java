@@ -14,7 +14,10 @@ class Circle {
     }
 
     public double getSquare() throws NegativeRadiusException {
-        return 3.16 * radius * radius;
+        if (radius < 0 ) {
+            throw new NegativeRadiusException("");
+        }
+        return 3.1415 * radius * radius;
     }
 
     Circle(Point point, int radius) {
