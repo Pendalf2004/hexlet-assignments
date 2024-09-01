@@ -19,7 +19,7 @@ public final class App {
         // BEGIN
         app.get("/users", ctx -> {
             var page = ctx.queryParamAsClass("page", Integer.class).getOrDefault(1);
-            var count = ctx.queryParamAsClass("per", Integer.class).getOrDefault(1);
+            var count = ctx.queryParamAsClass("per", Integer.class).getOrDefault(USERS.size());
             var resultList = new ArrayList<Map<String, String>>();
             for (var i = (page - 1) * count; i < page * count; i++) {
                 resultList.add(USERS.get(i));
