@@ -21,7 +21,7 @@ public final class App {
             var page = ctx.queryParamAsClass("page", Integer.class).getOrDefault(1);
             var count = ctx.queryParamAsClass("per", Integer.class).getOrDefault(1);
             var resultList = new ArrayList<Map<String, String>>();
-            for (var i = (page - 1) * count; i <= page * count; i++) {
+            for (var i = (page - 1) * count; i < page * count; i++) {
                 resultList.add(USERS.get(i));
             }
             ctx.json(resultList);
