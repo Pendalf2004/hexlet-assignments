@@ -17,8 +17,7 @@ public final class App {
         });
 
         // BEGIN
-        var web = Javalin.create();
-        web.get("/users", ctx -> {
+        app.get("/users", ctx -> {
             var page = ctx.queryParamAsClass("page", Integer.class).getOrDefault(1);
             var count = ctx.queryParamAsClass("per", Integer.class).getOrDefault(1);
             var resultList = new ArrayList<Map<String, String>>();
