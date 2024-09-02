@@ -26,7 +26,7 @@ public final class App {
            var id = ctx.pathParamAsClass("id", String.class).get();
            var notFound = true;
            for (var company : COMPANIES) {
-               if (company.get(id).equals(id)) {
+               if (company.get("id").equals(id)) {
                    notFound = false;
                    ctx.json(company);
                }
