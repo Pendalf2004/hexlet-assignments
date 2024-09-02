@@ -23,9 +23,10 @@ public final class App {
 
         // BEGIN
         app.get("/companies/{id}", ctx -> {
-           var id = ctx.pathParamAsClass("id", int.class).get();
+           var id = ctx.pathParamAsClass("id", Integer.class).get();
            try {
                var company = COMPANIES.get(id);
+               ctx.json(company);
            } catch (NoValueForKeyException ex) {
                ctx.json("Company not found");
            }
