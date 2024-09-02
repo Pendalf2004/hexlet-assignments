@@ -32,7 +32,7 @@ public final class App {
                }
            }
            if (notFound) {
-               throw new NotFoundResponse("User not found");
+               throw new NotFoundResponse("Company not found");
            }
 
         });
