@@ -27,15 +27,12 @@ public final class App {
             if (userId >= USERS.size() || userId < 0) {
                 throw new NotFoundResponse("User not found");
             }
-            for (var user : USERS) {
+            for (User user : USERS) {
                 if (user.getId() == userId) {
                     var page = new UserPage(user);
                     ctx.render("users/show.jte", model("page", page));
                 }
             }
-            var user = USERS.get(userId);
-            var page = new UserPage(user);
-            ctx.render("users/show.jte", model("page", page));
         });
         app.get("/users/", ctx -> {
             var page = new UsersPage(USERS);
