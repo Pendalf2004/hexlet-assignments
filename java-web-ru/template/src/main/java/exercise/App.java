@@ -28,8 +28,10 @@ public final class App {
                 throw new NotFoundResponse("User not found");
             }
             for (var user : USERS) {
-                var page = new UserPage(user);
-                ctx.render("users/show.jte", model("page", page));
+                if (user.getId() == userId) {
+                    var page = new UserPage(user);
+                    ctx.render("users/show.jte", model("page", page));
+                }
             }
             var user = USERS.get(userId);
             var page = new UserPage(user);
