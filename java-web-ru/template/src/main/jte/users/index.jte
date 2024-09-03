@@ -10,7 +10,6 @@
     </head>
 
     <body>
-        <h1>${page.getHeader()}</h1>
             @if(page.getUsers().isEmpty())
                 <p>No user data</p>
             @else
