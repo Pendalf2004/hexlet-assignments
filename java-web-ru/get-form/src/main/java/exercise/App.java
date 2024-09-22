@@ -31,7 +31,8 @@ public final class App {
                     if ((firstNameQuery != null) && !firstNameQuery.isEmpty()) {
                         String finalFirstNameQuery = firstNameQuery;
                         page = new UsersPage(USERS.stream().
-                                filter(user -> StringUtils.startsWithIgnoreCase(user.getFirstName(), finalFirstNameQuery))
+                                filter(user -> StringUtils.startsWithIgnoreCase(
+                                        user.getFirstName(), finalFirstNameQuery))
                                 .collect(Collectors.toList()), ctx.queryParams("term").toString());
                     }
                     ctx.render("users/index.jte", model("page", page));
