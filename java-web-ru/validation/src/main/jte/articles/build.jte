@@ -22,7 +22,8 @@ content = @`
     </div>
     <hr>
     <div>
-        <input type="text" name="content" value="${page.getArticleText()}" />
+        <textarea class="text" cols="86" rows ="20" name="content" >${page.getArticleText()}</textarea>
+
     </div>
     <hr>
     <input type="submit" value="Post" />
