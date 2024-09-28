@@ -2,6 +2,7 @@
 @param UsersPage page
 
 @template.layout.page(
+
     content = @`
         <h1>Пользователи</h1>
 
