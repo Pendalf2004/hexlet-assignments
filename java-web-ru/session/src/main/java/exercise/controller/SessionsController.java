@@ -62,6 +62,7 @@ public class SessionsController {
 
     public static void logOut(Context ctx) {
         ctx.removeCookie("hexLogged");
+
         var page = new MainPage(null);
         ctx.render("index.jte", model("page", page)).status(302);
     }
