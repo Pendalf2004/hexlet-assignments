@@ -40,9 +40,7 @@ public class PostsController {
                 ctx.render("posts/index.jte", model("page", page)).status(302);
             }
         } catch (NullPointerException e) {
-            //var page = new PostPage(new Post(title, text));
             var page = new PostsPage(PostRepository.getEntities());
-            //ctx.render("posts/index.jte", model("page", page)).status(302);
         }
     }
         // END
