@@ -62,5 +62,6 @@ public class ProductsRepository extends BaseRepository {
                 return result;
             }
         }
+
     // END
 }
