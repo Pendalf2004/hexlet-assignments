@@ -30,6 +30,7 @@ public class Application {
     @GetMapping("/posts") // Список страниц
     public List<Post> index(@RequestParam(defaultValue = "1") Integer limit,
                             @RequestParam(defaultValue = "0") Integer page) {
+        page = page == 0 ? 0 : page - 1;
         return posts.stream()
                 .skip(limit * page)
                 .limit(limit)
