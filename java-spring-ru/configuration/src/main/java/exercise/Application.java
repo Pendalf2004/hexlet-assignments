@@ -30,6 +30,7 @@ public class Application {
                 .filter(u -> admins.getAdmins().contains(u.getEmail()))
                 .map(User::getName)
                 .toList();
+
         return adminsNamesList;
     }
     // END
