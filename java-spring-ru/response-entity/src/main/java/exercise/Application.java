@@ -47,6 +47,7 @@ public class Application {
         return ResponseEntity
                 .status(201)
                 .body(post);
+
     }
 
     @GetMapping("/posts/{id}") // Вывод страницы
