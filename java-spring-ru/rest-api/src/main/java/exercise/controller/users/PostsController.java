@@ -32,8 +32,10 @@ public class PostsController {
 
     @PostMapping("/users/{id}/posts")
     public ResponseEntity<Post> createPostById(@PathVariable Integer id, @RequestBody Post post) {
+
         post.setUserId(id);
         allPosts.add(post);
+
         return ResponseEntity
                 .status(201)
                 .body(post);
