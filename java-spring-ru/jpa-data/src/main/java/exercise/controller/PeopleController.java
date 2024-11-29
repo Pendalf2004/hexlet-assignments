@@ -45,5 +45,6 @@ public class PeopleController {
     public void delete(@PathVariable Long id) {
         personRepository.deleteById(id);
     }
+
     // END
 }
