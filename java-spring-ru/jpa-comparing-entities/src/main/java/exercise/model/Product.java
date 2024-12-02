@@ -20,7 +20,9 @@ public class Product {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Long    id;
+
     private String  title;
+
     private Integer price;
 }
 // END
