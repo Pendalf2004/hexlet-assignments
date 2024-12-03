@@ -34,7 +34,6 @@ public class ProductsController {
         if (max == null) {
             return productRepository.findByPriceGreaterThanOrderByPrice(min);
         }
-
         return productRepository.findByPriceBetweenOrderByPrice(min, max);
     }
     // END
