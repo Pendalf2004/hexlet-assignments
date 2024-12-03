@@ -49,7 +49,8 @@ public class TasksController {
 
     @PutMapping(path = "/{id}")
     public Task update(@PathVariable long id, @RequestBody Task task) {
-        if (taskRepository.findAll().stream()
+        if (taskRepository.findAll()
+                .stream()
                 .noneMatch(task1 -> task1.getId() == id)) {
             throw new ResourceNotFoundException("Task " + id + " not found");
         }
