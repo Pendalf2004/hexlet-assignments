@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 // BEGIN
 @RestController
 public class WelcomeController {
+
     @Autowired
     private Daytime daytime;
+
     @GetMapping(path = "/welcome")
     public String index() {
         return "It is " + daytime.getName() + " now! Welcome to Spring!";
