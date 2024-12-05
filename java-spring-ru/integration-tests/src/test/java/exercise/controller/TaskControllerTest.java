@@ -121,7 +121,6 @@ class ApplicationTest {
                 .ignore(Select.field(Task::getId))
                 .create();
         taskRepository.save(task);
-
         var newTask = new HashMap<>();
         newTask.put("title", "New Title");
 
