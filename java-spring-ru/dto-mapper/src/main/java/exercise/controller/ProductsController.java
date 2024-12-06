@@ -35,8 +35,8 @@ public class ProductsController {
     public ProductDTO show(@PathVariable Long id) {
         var product = productRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Product " + id + " not found"));
-        ProductDTO productDTO = mapper.map(product);
-        return productDTO;
+
+        return mapper.map(product);
     }
 
     @PostMapping("")
