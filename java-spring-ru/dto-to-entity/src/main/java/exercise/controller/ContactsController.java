@@ -50,5 +50,6 @@ public class ContactsController {
         contactRepository.save(contact);
         return toContactDTO(contact);
     }
+
     // END
 }
