@@ -32,20 +32,20 @@ public class Guest {
 
     // BEGIN
     @NotNull
-    private String name;
+    private String      name;
 
     @Email
     @Column(unique = true)
-    private String email;
+    private String      email;
 
     @Pattern(regexp = "^\\+(\\d){11,13}")
-    private String phoneNumber;
+    private String      phoneNumber;
 
     @Pattern(regexp = "\\d{4}")
-    private String clubCard;
+    private String      clubCard;
 
     @FutureOrPresent
-    private LocalDate cardValidUntil;
+    private LocalDate   cardValidUntil;
 
 
     // END
