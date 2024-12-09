@@ -21,6 +21,7 @@ import exercise.model.Car;
 
 public abstract class CarMapper {
     public abstract void update(CarUpdateDTO dto, @MappingTarget Car model);
+
     public abstract CarDTO map(Car car);
     public abstract Car map(CarCreateDTO carData);
 }
